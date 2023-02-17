@@ -1,0 +1,67 @@
+.cardContainer{
+    background-color: rgb(231, 130, 244);
+    width: fit-content; 
+    border-top:solid 2.5em  rgb(231, 130, 244);
+    border-left: 2px solid rgb(231, 130, 244);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.489);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+}
+
+@media (max-width:750px ) {
+    .cardContainer{
+    display: flex;
+    flex-direction: column;
+    
+}
+}
+
+.containerName{
+    width: fit-content;
+    text-align: center;
+    align-items: center;
+}
+.name{
+    position: relative;
+    bottom: 4.5em;
+    left: 0.2em;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.482);
+    padding: 2px;
+    color:white;
+    
+}
+
+.gender, .specie {
+   position: relative;
+    bottom: 3em;
+}
+
+.containerCardFooter{
+    display: flex;
+    justify-content: space-around;
+    color: rgb(0, 244, 236); 
+    display: flex;
+    align-items: flex-start;
+    height: 3px;
+    
+
+}
+
+.close{
+
+    position: relative;
+    bottom:25.3em;
+    left: 10em;
+    background-color:rgba(225, 27, 27, 0.815);
+    color: white;
+    border: 1px solid rgba(225, 27, 27, 0.815);
+    border-radius: 25%;
+    box-shadow: 1px 1px 1px  rgba(0, 0, 0, 0.404);
+    cursor: pointer;
+}
+

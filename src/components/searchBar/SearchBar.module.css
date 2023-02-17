@@ -1,0 +1,30 @@
+.containerSearchBar{
+    width: 20%;
+    display: flex;
+    align-items: center;
+
+}
+
+.buttonAdd{
+    background-color: #08eb5b;
+    border: solid 1.4px grey;
+    color:rgb(10, 10, 10);
+    padding: 6px;
+    margin-left: 15px;
+    box-shadow: 1px 1px 1px 0.5px rgb(183, 28, 160);
+    width: fit-content;
+    margin-top: 1px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5%;
+
+}
+
+.inputSearch{
+    border: solid 1px white;
+    border-radius: 6px;
+    height: 25px;
+    width: 75%;
+    box-shadow: 1px 1px 1px 0.5px rgba(255, 255, 255, 0.616);
+    margin-top: 5%;
+}
+

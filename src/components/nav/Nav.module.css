@@ -1,0 +1,26 @@
+.logo{
+    width: 50%;
+ }
+ 
+ .containerLogo{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px; 
+ }
+
+.navContainer{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-evenly;
+   margin-top: 5px;
+
+
+ }
+
+ .navLink{
+   text-decoration: none;
+   color: rgb(0, 244, 236);
+   font-family: '-apple-system';
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
