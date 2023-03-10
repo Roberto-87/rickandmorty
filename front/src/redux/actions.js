@@ -7,30 +7,31 @@ import {
 } from "./types";
 import axios from "axios";
 
-export const addFavorite = async (character) => {
-  try {
-    const response = axios.post("http://localhost:3001/rickandmorty/fav");
+export const addFavorite = (character) => {
+  return async (dispatch) => {
+    const response = await axios.post(
+      "http://localhost:3001/rickandmorty/fav",
+      character
+    );
     const data = response.data;
-    return {
+    return dispatch({
       type: ADD_FAVORITE,
       payload: data,
-    };
-  } catch (error) {
-    console.log("error");
-  }
+    });
+  };
 };
 
 export const deleteFavorite = (id) => {
-  try {
-    const response = axios.post(`http://localhost:3001/rickandmorty/fav/${id}`);
+  return async (dispatch) => {
+    const response = await axios.delete(
+      `http://localhost:3001/rickandmorty/fav${id}`
+    );
     const data = response.data;
-    return {
+    return dispatch({
       type: DELETE_FAVORITE,
-      payload: data.id,
-    };
-  } catch (error) {
-    console.log("error");
-  }
+      payload: data,
+    });
+  };
 };
 
 export const filterCards = (gender) => {
@@ -48,11 +49,12 @@ export const orderCards = (id) => {
 };
 
 export const getAllCharacters = () => {
-  return async function () {
+  return async function (dispatch) {
     let response = await axios.get("https://rickandmortyapi.com/api/character");
-    return {
+    const data = response.data;
+    return dispatch({
       type: GET_ALL_CHARACTERS,
-      payload: response.data,
-    };
+      payload: data,
+    });
   };
 };
